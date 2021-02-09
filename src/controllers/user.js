@@ -6,6 +6,9 @@ exports.signup = (req, res) => {
         } 
         if (userFound) {
             console.log("found");
+            res.status(200).json({
+                message: "user already exists."
+            });
         }
         else {
             const {firstName, 
